@@ -1,0 +1,88 @@
+﻿<Window x:Class="SudnoTest_App.ExamerMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SudnoTest_App"
+        mc:Ignorable="d"
+        Title="ExamerMainWindow" Height="600" Width="800" Icon="371659.jpg">
+    <Grid Background ="#FFC8D6F6">
+        <StackPanel Background ="#FF0C2F7F"   HorizontalAlignment="Stretch" Height="100" Margin="0,0,-0.4,0" VerticalAlignment="Top" MinWidth="800" Grid.ColumnSpan="2">
+            <Grid>
+                <TextBlock x:Name="name" Text="Имя" HorizontalAlignment="Right" FontSize="15" FontWeight="Bold" Foreground="Wheat" Margin="0,5,29,0"  />
+                <TextBlock Text="Администратор" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0 20 0 20" Foreground="Wheat"/>
+                <Image Source="newimg.png" HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Width="85" Margin="10,8,0,0"/>
+                <Menu VerticalAlignment="Top" HorizontalAlignment="Right" Height="50" Margin="0 30 0 0" Background="#FF0C2F7F">
+                    <MenuItem>
+                        <MenuItem.Header >
+                            <Image Source="Menu_button.png" Width="50" Height="50" Margin="0 0 10 0"/>
+                        </MenuItem.Header>
+                        <MenuItem Header="Мои данные" FontSize="14" Background="#FF0C2F7F" Foreground="Wheat"  Margin="0 0 0 0"  Click="me_Click"/>
+                        <MenuItem Header="Выйти" FontSize="14" Background="#FF0C2F7F" Foreground="Wheat"  Margin="0 0 0 0" Click="back_button"/>
+                    </MenuItem>
+                </Menu>
+            </Grid>
+        </StackPanel>
+        <Border MinWidth="400" Margin="10,130,10,50" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel >
+                <TextBlock Text="Экзаменатор" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" />
+                <TextBlock Text="Выберите раздел работы" HorizontalAlignment="Center" FontSize="15" Foreground="Gray" Margin="0 0 0 20" />
+                <Button x:Name="exam" Background="#FF0C2F7F" Content='Список заявителей' Foreground="Black"   HorizontalAlignment="Center"  FontSize="20"  Margin="170,30,137.4,3" Width="183" Height="Auto" Click="exam_Click"   >
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <TextBlock   Text="{TemplateBinding Content}">
+                                <TextBlock.Style>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="TextDecorations" Value="Underline" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="me" Background="#FF0C2F7F" Content='Мониторинг статуса' Foreground="Black"   HorizontalAlignment="Center"  FontSize="20"  Margin="170,30,122.4,3" Width="198" Height="Auto"  Grid.ColumnSpan="3" Click="status_Click"   >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <TextBlock   Text="{TemplateBinding Content}">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="zajav" Background="#FF0C2F7F" Content='Результаты тестирования' Foreground="Black"   HorizontalAlignment="Center"  FontSize="20"  Margin="170,30,77.4,27.2" Width="243" Height="Auto"  Grid.ColumnSpan="3" Click="zajav_Click_1" RenderTransformOrigin="0.5,0.507"   >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <TextBlock   Text="{TemplateBinding Content}">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

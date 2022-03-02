@@ -1,0 +1,70 @@
+﻿<Window x:Class="SudnoTest_App.EditUsers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SudnoTest_App"
+        mc:Ignorable="d"
+        Title="Редактирование пользователя" Height="600" Width="800" Icon="371659.jpg">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background ="#FF0C2F7F"  HorizontalAlignment="Stretch" Height="100" Margin="0,0,-0.4,0" VerticalAlignment="Top" MinWidth="600">
+            <TextBlock  x:Name="name" Text="Имя" HorizontalAlignment="Right" FontSize="15" FontWeight="Bold" Foreground="Wheat" Margin="0,5,29,0"  />
+            <Image  Source="newimg.png" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="90" Margin="10,5,0,-5"/>
+            <Menu VerticalAlignment="Top" HorizontalAlignment="Right" Height="50" Margin="0 30 0 0" Background="#FF0C2F7F">
+                <MenuItem>
+                    <MenuItem.Header >
+                        <Image Source="Menu_button.png" Width="50" Height="50" Margin="0 0 10 0"/>
+                    </MenuItem.Header>
+                    <MenuItem Header="Назад" FontSize="14" Background="#FF0C2F7F" Foreground="Wheat"  Margin="0 0 0 0" Click="back_button"/>
+                </MenuItem>
+            </Menu>
+        </Grid>
+
+        <Grid Grid.Row="1" Background= "#FFC8D6F6" Margin="0,0,-0.4,-19.6">
+            <Border CornerRadius="20" Margin="30,30,30,45" Background="White" VerticalAlignment="Stretch" Padding="30">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="60" Color="LightGray" ShadowDepth="1" />
+                </Border.Effect>
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="174*"/>
+                            <ColumnDefinition Width="45*"/>
+                            <ColumnDefinition Width="254*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Text =" Раздел редактирования" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="83,-21,44.6,40.4" Grid.ColumnSpan="3" Width="346" ></TextBlock>
+                        <TextBlock Grid.Row="0" Text=" Здесь вы можете редактировать пользователей"  HorizontalAlignment="Center" FontSize="15" Foreground="Gray" Margin="83,30,-121.4,40.4" Width="512" Grid.ColumnSpan="3" ></TextBlock>
+                    </Grid>
+                    <Grid>
+                        <StackPanel Name="mainPanel"/>
+                    </Grid>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="160*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="id"  Name="identic"  Visibility="Hidden" Margin="4,-39,460.6,14.4" Grid.ColumnSpan="2"/>
+                        <TextBlock Text="ФИО" HorizontalAlignment="Left" FontWeight= "Bold" FontSize="20" Margin="33.2,-5,0,-4.6" Grid.Column="1" Grid.RowSpan="2"/>
+                        <TextBlock Text="Логин"  Margin="33.2,40.6,0,-50.6" HorizontalAlignment="Left"  FontWeight= "Bold" FontSize="20" RenderTransformOrigin="1.762,1.161" Grid.Column="1" Grid.Row="1"></TextBlock>
+                        <TextBlock Text="Пароль" HorizontalAlignment="Left"  FontWeight= "Bold" FontSize="20" Margin="33.2,102.6,0,-112.6" Grid.Column="1" Grid.Row="1"></TextBlock>
+                        <TextBox x:Name="FIO" Text="" HorizontalAlignment="Center" MinWidth="250" MaxWidth="320" Background="#FFC8D6F6" Margin="140.2,0,-12.4,-1" Grid.Column="1" Width="337" Grid.RowSpan="2"></TextBox>
+                        <TextBox x:Name="login" Text="" HorizontalAlignment="Center" MinWidth="250" MaxWidth="320" Background="#FFC8D6F6" Margin="140.2,48.2,-10.4,-50" Grid.Column="1" Width="335" Grid.Row="1"></TextBox>
+                        <TextBox x:Name="pass" Text="" HorizontalAlignment="Center" MinWidth="250" MaxWidth="320" Background="#FFC8D6F6" Margin="140.2,102.6,-10.4,-105.6" Grid.Column="1" Width="335" Grid.Row="1"></TextBox>
+                    </Grid>
+                    <Grid Margin="20">
+                        <Button Background ="#FF0C2F7F" HorizontalAlignment="Center" Content="Изменить" Click="Edit_Click" Margin="139,103,-20.4,-103" Width="315"></Button>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+        </Grid>
+    </Grid>
+</Window>

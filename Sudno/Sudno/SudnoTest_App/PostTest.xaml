@@ -1,0 +1,55 @@
+﻿<Window x:Class="SudnoTest_App.PostTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SudnoTest_App"
+        mc:Ignorable="d"
+        Title="PostTest" Height="600" Width="800" Icon="371659.jpg">
+    <Grid Background = "#FFC8D6F6">
+        <StackPanel Background ="#FF0C2F7F"   HorizontalAlignment="Center" Height="100" Margin="0,0,-0.4,0" VerticalAlignment="Top" MinWidth="800" Grid.ColumnSpan="2">
+            <Grid>
+                <TextBlock x:Name="name" Text="Имя" HorizontalAlignment="Left" FontSize="12" FontWeight="Bold" Foreground="Wheat" Margin="20,10,0,70"  />
+                <Image Source="371659.jpg" HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="100"/>
+                <TextBlock Text="Выбранный район:" HorizontalAlignment="Right" FontSize="12" FontWeight="Bold" Foreground="Wheat" Margin="20,10,150,70"></TextBlock>
+                <TextBlock Text="Выбранное судно:" HorizontalAlignment="Right" FontSize="12" FontWeight="Bold" Foreground="Wheat" Margin="20,30,155,70"></TextBlock>
+                <TextBlock x:Name="tpOfDis" Text="Выбранный район" HorizontalAlignment="Right" FontSize="12" FontWeight="Bold" Foreground="Wheat" Margin="20,10,30,70"></TextBlock>
+                <TextBlock x:Name="tpOfSh" Text="Выбранное судно" HorizontalAlignment="Right" FontSize="12" FontWeight="Bold" Foreground="Wheat" Margin="20,30,35,70"></TextBlock>
+            </Grid>
+        </StackPanel>
+  
+        <Border MinWidth="400" Margin="10,130,10,50" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+
+            <StackPanel >
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" Margin="0 0 0 20" Text="Даны ответы на следующие билеты:" />
+                </Grid>
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" FontSize="18" FontWeight="Bold" Margin="0 0 0 20" Text="Билет№1" />
+                    <TextBlock HorizontalAlignment="Center" FontSize="18"  Margin="0 0 30 20" Text="Вы ответили на" />
+                    <TextBlock x:Name="bil1" HorizontalAlignment="Center" FontSize="18" Margin="150 0 0 20" Text="n" />
+                    <TextBlock HorizontalAlignment="Right" FontSize="18"  Margin="0 0 65 20" Text="вопросов" />
+                    <TextBlock HorizontalAlignment="Right" FontSize="18"  Margin="0 0 10 20" Text="из 10" />
+                </Grid>
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" FontSize="18" FontWeight="Bold" Margin="0 0 0 20" Text="Билет№2" />
+                    <TextBlock HorizontalAlignment="Center" FontSize="18"  Margin="0 0 30 20" Text="Вы ответили на" />
+                    <TextBlock x:Name="bil2" HorizontalAlignment="Center" FontSize="18" Margin="150 0 0 20" Text="n" />
+                    <TextBlock HorizontalAlignment="Right" FontSize="18"  Margin="0 0 65 20" Text="вопросов" />
+                    <TextBlock HorizontalAlignment="Right" FontSize="18"  Margin="0 0 10 20" Text="из 10" />
+                </Grid>
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" FontSize="18" FontWeight="Bold" Margin="0 0 0 20" Text="Вопросов без ответа:" />
+                    <TextBlock x:Name="otv" HorizontalAlignment="Center" FontSize="18" Margin="150 0 230 20" Text="n" />
+                    <TextBlock x:Name="res" Visibility="Hidden" HorizontalAlignment="Center" FontSize="18" Margin="150 0 0 20" Text="n" />
+                    <TextBlock x:Name="res_text" Visibility="Hidden" HorizontalAlignment="Right" FontSize="18" Margin="150 0 50 20" Text="n" />
+                </Grid>
+                <Button Background ="#FF0C2F7F" HorizontalAlignment="Center" Content="Результаты" Margin="0 30 0 0" Click="Start_Click"></Button>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

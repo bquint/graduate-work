@@ -1,0 +1,56 @@
+﻿<Window x:Class="SudnoTest_App.UserMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SudnoTest_App"
+        mc:Ignorable="d"
+        Title="Пользователь" Height="600" Width="800" Icon="371659.jpg">
+    <Grid Background ="#FFC8D6F6">
+        <StackPanel Background ="#FF0C2F7F"   HorizontalAlignment="Stretch" Height="100" Margin="0,0,-0.4,0" VerticalAlignment="Top" MinWidth="800" Grid.ColumnSpan="2">
+            <Grid>
+                <TextBlock  x:Name="name" Text="Имя" HorizontalAlignment="Right" FontSize="15" FontWeight="Bold" Foreground="Wheat" Margin="0,5,29,0"  />
+                <Image  Source="newimg.png" HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Width="85" Margin="10,8,0,0"/>
+                <Menu VerticalAlignment="Top" HorizontalAlignment="Right" Height="50" Margin="0 30 0 0" Background="#FF0C2F7F">
+                    <MenuItem>
+                        <MenuItem.Header >
+                            <Image Source="Menu_button.png" Width="50" Height="50" Margin="0 0 10 0"/>
+                        </MenuItem.Header>
+                        <MenuItem Header="Назад" FontSize="14" Background="#FF0C2F7F" Foreground="Wheat"  Margin="0 0 0 0" Click="back_button"/>
+                    </MenuItem>
+                </Menu>
+                <TextBlock Text="Выбор билетов" FontSize="30" HorizontalAlignment="Center" FontWeight="Bold" Foreground="Wheat" Margin="0 20 0 20" />
+            </Grid>
+        </StackPanel>
+        <Border MinWidth="400" Margin="10,130,10,50" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel >
+                <TextBlock Text="Перед началом тестирования пожалуйста укажите район плавания и тип судна" FontSize="13" Foreground="Gray" Margin="0 0 0 20" />
+
+                <Grid>
+                    <TextBlock Text="Район плаванья" FontSize="13" HorizontalAlignment="Left" FontWeight="Bold" Margin="0 0 0 20" ></TextBlock>
+                    <ComboBox x:Name="identic" HorizontalAlignment="Center"   Background= "#FFC8D6F6" Margin="0 0 0 0" Width="120" >
+                        <ComboBoxItem Content="Блок МП" ></ComboBoxItem>
+                        <ComboBoxItem Content="Блок ВВП"></ComboBoxItem>
+                        <ComboBoxItem Content="Блок МТ"></ComboBoxItem>
+                        <ComboBoxItem Content="Блок ВП" ></ComboBoxItem>
+                    </ComboBox>
+                </Grid>
+
+                <Grid>
+                    <TextBlock Text="Тип судна"  FontSize="13" HorizontalAlignment="Left" FontWeight="Bold" Margin="0,0,0,19.6" ></TextBlock>
+                    <ComboBox x:Name="identic2"  HorizontalAlignment="Center"  Background= "#FFC8D6F6" Margin="0 0 0 0" Width="120" >
+                        <ComboBoxItem Content="Гидроцикл" />
+                        <ComboBoxItem Content="Моторное судно" />
+                        <ComboBoxItem Content="Парусное судно" />
+                    </ComboBox>
+                </Grid>
+                <Button x:Name="ena" Background ="#FF0C2F7F" HorizontalAlignment="Center" Content="Записать" Click="Start_Click" Margin="0 10 0 0" ></Button>
+                <Button x:Name="enab" Background ="#FF0C2F7F" HorizontalAlignment="Center" Content="Перейти" Click="Go_Click" Margin="0 10 0 0" ></Button>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

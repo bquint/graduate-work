@@ -1,0 +1,53 @@
+﻿<Window x:Class="SudnoTest_App.AdminPersonalData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SudnoTest_App"
+        mc:Ignorable="d"
+        Title="Мои данные" Height="600" Width="800" Icon="371659.jpg" >
+    <Grid  Background = "#FFC8D6F6" >
+        <StackPanel Background ="#FF0C2F7F"   HorizontalAlignment="Stretch" Height="100" Margin="0,0,-0.4,0" VerticalAlignment="Top" MinWidth="800" Grid.ColumnSpan="2">
+            <Grid>
+                <TextBlock x:Name="name" Text="Имя" HorizontalAlignment="Right" FontSize="15" FontWeight="Bold" Foreground="Wheat" Margin="0,5,29,0"  />
+                <Image Source="newimg.png" HorizontalAlignment="Left"  Height="85" VerticalAlignment="Top" Width="85" Margin="10,8,0,0"/>
+                <Menu VerticalAlignment="Top" HorizontalAlignment="Right" Height="50" Margin="0 30 0 0" Background="#FF0C2F7F">
+                    <MenuItem>
+                        <MenuItem.Header >
+                            <Image Source="Menu_button.png" Width="50" Height="50" Margin="0 0 10 0"/>
+                        </MenuItem.Header>
+                        <MenuItem Header="Назад" FontSize="14" Background="#FF0C2F7F" Foreground="Wheat"  Margin="0 0 0 0" Click="back_button"/>
+                    </MenuItem>
+                </Menu>
+               
+            </Grid>
+        </StackPanel>
+        <Border MinWidth="400" Margin="10,130,10,50" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel >
+                <TextBlock Text="Мои данные" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" />
+                <TextBlock Text="Здесь вы можете смотреть и править информацию о себе" HorizontalAlignment="Center" FontSize="15" Foreground="Gray" Margin="0 0 0 20" />
+                <Grid>
+                    <TextBlock Text="ФИО" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold"  Margin="0 10 0 0"></TextBlock>
+                    <TextBox x:Name="fIO" HorizontalAlignment="Center" MinWidth="200" MaxWidth="300" Background= "#FFC8D6F6" Margin="0 10 0 0"></TextBox>
+                  
+                   
+                </Grid>
+                <Grid>
+                    <TextBlock Text="Логин" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold"  Margin="0 10 0 0"></TextBlock>
+                    <TextBox x:Name="login" HorizontalAlignment="Center" MinWidth="200" MaxWidth="300" Background= "#FFC8D6F6" Margin="0 10 0 0"></TextBox>
+                   
+                </Grid>
+                <Grid>
+                    <TextBlock Text="Пароль" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold"  Margin="0 10 0 0"></TextBlock>
+                    <TextBox x:Name="pass" HorizontalAlignment="Center" MinWidth="200" MaxWidth="300" Background= "#FFC8D6F6" Margin="0 10 0 0"></TextBox>
+                 
+                </Grid>
+                <Button Background ="#FF0C2F7F" HorizontalAlignment="Center" Content="Подтвердить изменения" Margin="0 30 0 0" Click="Edit_Click"></Button>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
